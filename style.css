@@ -1,0 +1,383 @@
+/* CONFIGURACIÓN INICIAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E5DCC5;
+    color: #4A4A4A;
+    line-height: 1.6;
+    font-size: 1.6rem; 
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #6D6875;
+}
+
+/* MARGENES GLOBALES */
+.margenes-pagina {
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+header {
+    background: white;
+    padding: 2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.05);
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logotipo {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e378a8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #6D6875;
+    margin-left: 3rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+nav ul li a:hover {
+    color: #e378a8;
+}
+
+/* SECCIÓN PORTADA (INICIO) */
+.portada {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+
+.contenido-portada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 110rem; 
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    gap: 4rem;
+}
+
+.texto-portada {
+    flex: 1;
+}
+
+.texto-portada h1 {
+    font-size: 5.5rem; 
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.texto-portada p {
+    font-size: 1.8rem;
+}
+
+.foto-portada {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-portada img {
+    width: 100%;
+    max-width: 38rem;
+    height: 48rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+/* BOTONES PRINCIPALES */
+.boton-rosado {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background: #e378a8;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    border: 0.2rem solid transparent; 
+}
+
+.boton-rosado:hover {
+    color: #e378a8;
+    background: white;
+    border: 0.2rem solid #e378a8;
+    transform: translateY(-0.3rem);
+}
+
+/* SECCIÓN ACERCA DE MÍ */
+.acerca-de {
+    padding: 6rem 0;
+    text-align: center;
+    background-color: #F8F9FA;
+    margin: 2rem 0;
+}
+.acerca-de h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+.acerca-de p {
+    font-size: 2.2rem;
+    font-style: italic;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/* SECCIÓN PRODUCTOS */
+.seccion-productos {
+    padding: 7rem 0;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+}
+
+.rejilla-productos {
+    display: flex;       
+    flex-wrap: wrap;     
+    gap: 3rem;           
+    justify-content: center; 
+}
+
+.carta-producto {
+    background: white; 
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    flex: 1 1 30rem; 
+    max-width: 35rem;  
+}
+
+.carta-producto h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.carta-producto p {
+    font-size: 1.5rem;
+}
+
+.carta-producto:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+}
+
+.marco-foto img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* BOTONES SECUNDARIOS */
+.boton-linea-rosada {
+    display: block;
+    margin-top: 2rem;
+    color: #e378a8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: 0.2rem solid #e378a8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: transparent;
+}
+
+.boton-linea-rosada:hover {
+    background: #e378a8;
+    color: white;
+}
+
+/* SECCIÓN TESTIMONIOS */
+.seccion-testimonios {
+    padding: 8rem 0;
+    background-color: #F8F9FA;
+}
+
+.rejilla-testimonios {
+    display: flex;       
+    flex-wrap: wrap;     
+    gap: 3rem;           
+    justify-content: center; 
+}
+
+.carta-testimonio {
+    background: #E5DCC5;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+    text-align: center;
+    flex: 1 1 30rem; 
+    max-width: 40rem; 
+}
+
+.carta-testimonio p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.carta-testimonio span {
+    font-weight: 600;
+    color: #e378a8;
+    font-size: 1.5rem;
+}
+
+/* SECCIÓN CONTACTO (BANNER) */
+.seccion-contacto {
+    padding: 8rem 0;
+    background-color: #E5DCC5;
+    text-align: center;
+}
+
+.banner-contacto {
+    background: white;
+    padding: 5rem 3rem;
+    border-radius: 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.05);
+}
+
+.banner-contacto:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 2rem 5rem rgba(0,0,0,0.1);
+}
+
+.banner-contacto:hover h2 {
+    color: #e378a8;
+}
+
+.banner-contacto h2 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner-contacto p {
+    font-size: 1.8rem;
+    max-width: 60rem;
+    margin: 0 auto 3rem;
+}
+
+.info-adicional p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #6D6875;
+    font-weight: 600;
+}
+
+.redes-sociales-banner a {
+    text-decoration: none;
+    color: #6D6875;
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 2rem; 
+}
+
+.redes-sociales-banner a:hover {
+    color: #e378a8;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.boton-whatsapp {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: #25d366;
+    color: white;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    z-index: 1000;
+    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 4rem;
+    background: #6D6875;
+    color: white;
+    font-size: 1.4rem;
+}
+
+/* --- MODO RESPONSIVE (CELULARES) --- */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%; 
+    }
+
+    .barra-navegacion {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        margin-left: 0;
+    }
+
+    .contenido-portada {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .texto-portada h1 {
+        font-size: 3.8rem;
+    }
+
+    .banner-contacto h2 {
+        font-size: 3.2rem;
+    }
+}
