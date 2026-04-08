@@ -17,9 +17,15 @@
     <header>
         <div class="barra-navegacion">
             <div class="logotipo">nailsdorita</div>
-            <nav>
+            <nav class="navegacion">
+                <input type="checkbox" id="check-menu">
+                <label for="check-menu" class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="#productos">Productos</a></li>
                     <li><a href="#testimonios">Testimonios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
@@ -108,16 +114,25 @@
             <div class="margenes-pagina">
                 <div class="banner-contacto">
                     <h2>¿Lista para resaltar tu belleza?</h2>
-                    <p>Escríbeme directamente para agendar tu cita, consultar disponibilidad de productos o recibir asesoría personalizada.</p>
+                    <p>Escríbeme tus datos y coordinamos tu pedido por WhatsApp.</p>
+                    
+                    <div class="formulario-contacto">
+                        <div class="campo">
+                            <input type="text" id="nombre-cliente" placeholder="Tu Nombre Completo" required>
+                        </div>
+                        <div class="campo">
+                            <input type="email" id="correo-cliente" placeholder="Tu Correo Electrónico" required>
+                        </div>
+                        <div class="campo">
+                            <textarea id="mensaje-cliente" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                        </div>
+                        <button type="button" class="boton-rosado" onclick="enviarWhatsApp()">Enviar Mensaje</button>
+                    </div>
                     
                     <div class="info-adicional">
                         <p><i class="fas fa-map-marker-alt"></i> CR45 #107b-55 Medellín, Antioquia</p>
                         <p><i class="fas fa-clock"></i> Lun - Sáb: 9:00 AM - 9:00 PM</p>
                     </div>
-
-                    <a href="https://wa.me/573017746392" target="_blank" class="boton-rosado">
-                        <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
-                    </a>
 
                     <div class="redes-sociales-banner">
                         <a href="https://www.instagram.com/nailsdorita_05/" target="_blank"><i class="fab fa-instagram"></i> Siguenos en Instagram</a>
@@ -130,6 +145,25 @@
     <footer>
         <p>&copy; 2026 nailsdorita - Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function enviarWhatsApp() {
+            const nombre = document.getElementById('nombre-cliente').value;
+            const correo = document.getElementById('correo-cliente').value;
+            const mensaje = document.getElementById('mensaje-cliente').value;
+            const telefono = "573017746392";
+            
+            if (!nombre || !mensaje) {
+                alert("Por favor, ingresa al menos tu nombre y el mensaje.");
+                return;
+            }
+
+            const texto = `Hola Dorita! Mi nombre es ${nombre}. Mi correo es ${correo}. Mi consulta es: ${mensaje}`;
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
 
 </body>
 </html>
