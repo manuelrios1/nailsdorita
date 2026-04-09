@@ -115,7 +115,8 @@
                 <div class="banner-contacto">
                     <h2>¿Lista para resaltar tu belleza?</h2>
                     <p>Escríbeme tus datos y coordinamos tu pedido por WhatsApp.</p>
-                    
+                <form action="">
+
                     <div class="formulario-contacto">
                         <div class="campo">
                             <input type="text" id="nombre-cliente" placeholder="Tu Nombre Completo" required>
@@ -126,8 +127,9 @@
                         <div class="campo">
                             <textarea id="mensaje-cliente" placeholder="¿En qué puedo ayudarte?" required></textarea>
                         </div>
-                        <button type="button" class="boton-rosado" onclick="enviarWhatsApp()">Enviar Mensaje</button>
+                        <button type="submit" class="boton-rosado">Enviar Mensaje</button>
                     </div>
+                </form>
                     
                     <div class="info-adicional">
                         <p><i class="fas fa-map-marker-alt"></i> CR45 #107b-55 Medellín, Antioquia</p>
@@ -145,25 +147,6 @@
     <footer>
         <p>&copy; 2026 nailsdorita - Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        function enviarWhatsApp() {
-            const nombre = document.getElementById('nombre-cliente').value;
-            const correo = document.getElementById('correo-cliente').value;
-            const mensaje = document.getElementById('mensaje-cliente').value;
-            const telefono = "573126147597";
-            
-            if (!nombre || !mensaje) {
-                alert("Por favor, ingresa al menos tu nombre y el mensaje.");
-                return;
-            }
-
-            const texto = `Hola Dorita! Mi nombre es ${nombre}. Mi correo es ${correo}. Mi consulta es: ${mensaje}`;
-            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
-
-            window.open(url, '_blank');
-        }
-    </script>
 
 </body>
 </html>
