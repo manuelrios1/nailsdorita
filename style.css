@@ -23,6 +23,10 @@ h1, h2, h3 {
     color: #6D6875;
 }
 
+a {
+    text-decoration: none;
+}
+
 .margenes-pagina {
     max-width: 110rem;
     margin: 0 auto;
@@ -84,7 +88,6 @@ nav ul {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #6D6875;
     margin-left: 3rem;
     font-weight: 700;
@@ -361,10 +364,13 @@ nav ul li a:hover {
     font-weight: 600;
 }
 
+.info-adicional:hover a p {
+    color: #e378a8;
+}
+
 .redes-sociales-banner a {
-    text-decoration: none;
     color: #6D6875;
-    font-size: 2rem;
+    font-size: 2.5rem;
     display: inline-block;
     margin-top: 2rem; 
 }
