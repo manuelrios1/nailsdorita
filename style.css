@@ -259,6 +259,8 @@ nav ul li a:hover {
     color: white;
 }
 
+.car
+
 .seccion-testimonios {
     padding: 8rem 0;
     background-color: #F8F9FA;
@@ -403,6 +405,10 @@ footer {
     background: #6D6875;
     color: white;
     font-size: 1.4rem;
+}
+
+p {
+    color: #4A4A4A;
 }
 
 @media (max-width: 768px) {
