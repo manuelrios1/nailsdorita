@@ -228,6 +228,10 @@ nav ul li a:hover {
     font-size: 1.5rem;
 }
 
+.carta-producto span {
+    color: #25d366;
+}
+
 .carta-producto:hover {
     transform: translateY(-1rem);
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
@@ -243,7 +247,6 @@ nav ul li a:hover {
 
 .boton-linea-rosada {
     display: block;
-    margin-top: 2rem;
     color: #e378a8;
     text-decoration: none;
     font-weight: bold;
@@ -252,14 +255,13 @@ nav ul li a:hover {
     padding: 1rem;
     border-radius: 0.5rem;
     background: transparent;
+    margin: 2rem 0 2rem 0;
 }
 
 .boton-linea-rosada:hover {
     background: #e378a8;
     color: white;
 }
-
-.car
 
 .seccion-testimonios {
     padding: 8rem 0;
@@ -285,7 +287,6 @@ nav ul li a:hover {
 
 .carta-testimonio p {
     font-style: italic;
-    margin-bottom: 1.5rem;
     font-size: 1.6rem;
 }
 
@@ -407,8 +408,56 @@ footer {
     font-size: 1.4rem;
 }
 
+footer p{
+    color: #F8F9FA;
+}
+
 p {
     color: #4A4A4A;
+}
+
+.slider-contenedor {
+    width: 100%;
+    max-width: 38rem;
+    height: 48rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+}
+
+.slider-fotos {
+    display: flex;
+    width: 600%; 
+    height: 100%;
+    animation: carrusel6fotos 12s infinite; 
+}
+
+.slider-fotos img {
+    width: 16.666%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes carrusel6fotos {
+    0% { transform: translateX(0); }
+    13.66% { transform: translateX(0); } 
+    
+    16.66% { transform: translateX(-16.666%); }
+    30.33% { transform: translateX(-16.666%); } 
+    
+    33.33% { transform: translateX(-33.332%); }
+    47.00% { transform: translateX(-33.332%); } 
+    
+    50.00% { transform: translateX(-49.998%); }
+    63.66% { transform: translateX(-49.998%); } 
+    
+    66.66% { transform: translateX(-66.664%); }
+    80.33% { transform: translateX(-66.664%); } 
+    
+    83.33% { transform: translateX(-83.330%); }
+    97.00% { transform: translateX(-83.330%); } 
+    
+    100% { transform: translateX(0); }
 }
 
 @media (max-width: 768px) {
